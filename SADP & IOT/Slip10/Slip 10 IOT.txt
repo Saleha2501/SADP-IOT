@@ -1,0 +1,74 @@
+	Write python programs on Pi like:                                                                                    
+a)	Print a name 'n' times, where name and n are read from standard input, using for and while loops.                                                                                                                       
+b)	Handle Divided by Zero Exception.                                                                             
+c)	Print current time for 10 times with an interval of10seconds.                                       
+d)	Read a fileline byline and print the word count of each line 	[15 M] 
+
+Program (a): Print a Name 'n' Times Using for and while Loops
+This program takes a name and an integer n as input and prints the name n times using both for and while loops.
+
+python
+Copy code
+# Read inputs
+name = input("Enter a name: ")
+n = int(input("Enter the number of times to print the name: "))
+
+# Using for loop
+print("\nUsing for loop:")
+for i in range(n):
+    print(name)
+
+# Using while loop
+print("\nUsing while loop:")
+count = 0
+while count < n:
+    print(name)
+    count += 1
+Program (b): Handle Division by Zero Exception
+This program attempts a division and handles the ZeroDivisionError exception if the denominator is zero.
+
+python
+Copy code
+# Read two numbers and handle division by zero
+try:
+    numerator = float(input("Enter the numerator: "))
+    denominator = float(input("Enter the denominator: "))
+    
+    # Perform division
+    result = numerator / denominator
+    print(f"Result: {result}")
+
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+Program (c): Print Current Time 10 Times with an Interval of 10 Seconds
+This program prints the current time 10 times, with a 10-second interval between each print.
+
+python
+Copy code
+import time
+from datetime import datetime
+
+# Print current time 10 times with 10 seconds interval
+for _ in range(10):
+    print("Current Time:", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+    time.sleep(10)  # Sleep for 10 seconds
+Program (d): Read a File Line by Line and Print the Word Count of Each Line
+This program reads a text file line by line and prints the word count for each line. Replace 'example.txt' with your file's path.
+
+python
+Copy code
+# File path (Replace 'example.txt' with the path to your file)
+file_path = 'example.txt'
+
+# Open the file and process each line
+try:
+    with open(file_path, 'r') as file:
+        line_number = 1
+        for line in file:
+            words = line.split()
+            word_count = len(words)
+            print(f"Line {line_number}: {word_count} words")
+            line_number += 1
+
+except FileNotFoundError:
+    print(f"Error: The file '{file_path}' was not found.")

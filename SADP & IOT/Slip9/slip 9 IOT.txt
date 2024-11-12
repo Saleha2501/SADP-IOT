@@ -1,0 +1,76 @@
+slip 9	Write python programs on Pi :  
+a)	Read your name and print Hello message with name 
+b)	Read two numbers and print their sum, difference, product and division.  
+c)	Word and character count of a given string.  
+d)	Area of a given shape (rectangle, triangle and circle) reading shape and appropriate  
+	values from standard input. 
+Here are Python programs for each of the tasks specified. These programs can be executed on a Raspberry Pi or any system with Python installed.
+
+Program (a): Greeting with Name
+This program reads the user's name and prints a greeting message.
+
+python
+Copy code
+# Program to greet the user
+name = input("Enter your name: ")
+print(f"Hello, {name}!")
+Program (b): Basic Arithmetic Operations
+This program reads two numbers and calculates their sum, difference, product, and division.
+
+python
+Copy code
+# Program to perform arithmetic operations on two numbers
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+
+# Calculating and displaying results
+print(f"Sum: {num1 + num2}")
+print(f"Difference: {num1 - num2}")
+print(f"Product: {num1 * num2}")
+if num2 != 0:
+    print(f"Division: {num1 / num2}")
+else:
+    print("Division: Cannot divide by zero")
+Program (c): Word and Character Count of a String
+This program takes a string as input and counts the words and characters.
+
+python
+Copy code
+# Program to count words and characters in a string
+text = input("Enter a string: ")
+
+# Counting words and characters
+word_count = len(text.split())
+character_count = len(text)
+
+print(f"Word count: {word_count}")
+print(f"Character count: {character_count}")
+Program (d): Area of Different Shapes
+This program calculates the area of a rectangle, triangle, or circle based on user input.
+
+python
+Copy code
+# Program to calculate the area of different shapes
+import math
+
+shape = input("Enter the shape (rectangle, triangle, circle): ").strip().lower()
+
+if shape == "rectangle":
+    length = float(input("Enter the length of the rectangle: "))
+    width = float(input("Enter the width of the rectangle: "))
+    area = length * width
+    print(f"Area of the rectangle: {area}")
+
+elif shape == "triangle":
+    base = float(input("Enter the base of the triangle: "))
+    height = float(input("Enter the height of the triangle: "))
+    area = 0.5 * base * height
+    print(f"Area of the triangle: {area}")
+
+elif shape == "circle":
+    radius = float(input("Enter the radius of the circle: "))
+    area = math.pi * radius * radius
+    print(f"Area of the circle: {area}")
+
+else:
+    print("Invalid shape entered.")

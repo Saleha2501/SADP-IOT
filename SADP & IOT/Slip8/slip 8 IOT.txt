@@ -1,0 +1,87 @@
+slip 08:
+Start Raspberry Pi and execute various Linux commands in command terminal window:           
+ls, cd, touch, mv, rm, man, mkdir, rmdir, tar, gzip, cat, more, less, ps, sudo, cron, chown, chgrp, pingetc. 
+
+Commands and Descriptions
+ls - Lists files and directories in the current directory.
+
+
+
+ls
+ls -l    # Detailed view with permissions, owner, and size
+cd - Changes the current directory.
+
+
+
+cd /home/pi    # Change to the pi user’s home directory
+cd ..          # Go up one directory level
+touch - Creates an empty file.
+
+
+touch example.txt    # Creates an empty file named example.txt
+mv - Moves or renames a file or directory.
+
+mv example.txt new_example.txt    # Rename file
+mv new_example.txt /home/pi/docs  # Move file to /docs directory
+rm - Removes a file.
+
+
+rm new_example.txt    # Deletes the file named new_example.txt
+rm -r my_directory    # Deletes a directory and its contents
+man - Opens the manual page for a command.
+
+
+
+man ls    # Shows manual for the `ls` command
+mkdir - Creates a new directory.
+
+
+mkdir my_directory    # Creates a directory named my_directory
+rmdir - Removes an empty directory.
+
+
+rmdir my_directory    # Deletes the empty directory named my_directory
+tar - Archives files into a tarball.
+
+
+tar -cvf archive.tar /path/to/directory   # Creates archive.tar from directory
+tar -xvf archive.tar                      # Extracts files from archive.tar
+gzip - Compresses files.
+
+
+gzip example.txt    # Compresses example.txt to example.txt.gz
+gzip -d example.txt.gz    # Decompresses example.txt.gz
+cat - Displays the contents of a file.
+
+
+cat example.txt    # Shows content of example.txt
+more and less - Views long text files page by page.
+
+
+more example.txt    # View content with the ability to scroll
+less example.txt    # Similar to more but with more features
+ps - Shows current processes.
+
+
+ps       # Lists currently running processes for the user
+ps aux   # Lists all processes with detailed information
+sudo - Runs a command as the superuser (administrator).
+
+
+sudo apt update    # Updates the package list as an administrator
+cron - Manages scheduled tasks.
+
+
+crontab -e    # Edits the cron table to schedule tasks
+chown - Changes the owner of a file or directory.
+
+
+sudo chown pi example.txt    # Changes the owner of example.txt to the user pi
+chgrp - Changes the group ownership of a file or directory.
+
+
+sudo chgrp admin example.txt    # Changes the group of example.txt to admin
+ping - Checks the network connection to another computer.
+
+
+ping google.com    # Sends packets to google.com to check connectivity
